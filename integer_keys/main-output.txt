@@ -1,0 +1,33 @@
+-------------- Iterative AVL C Implementation - Binary Search Tree ---------------
+--- using string and INTEGER keys, with and without key -> value association ---
+
+Insert 10000 random keys and verify the tree for each one.
+Delete the root until the tree is empty and verify each time.
+Verifier is OK, its recursive counter is 82732514.
+
+Insert 10000 sorted keys and verify the tree for each one.
+Delete the keys and verify each time.
+Verifier is OK, its recursive counter is 100000000.
+
+Insert 20000 sorted keys and verify the tree for each one, also store a value.
+Delete the keys (reverse) and verify each time, also check the value.
+Verifier is OK, its recursive counter is 400000000.
+
+Insert 1000000 sorted keys. Took 0.092351s.
+Delete the 1000000 sorted keys from the rightmost. Took 0.143992s.
+
+Insert 5000 keys, set a value, and read each value 5000 times. Took 0.80799s.
+
+Play 3s with 20 numbers but verify the tree at each step.
+******...........*.*..***...........*.*.****....*.****
+Verifier is OK, its recursive counter is 237461162.
+
+Insert small numbers randomly and use the <each> function to print the keys.
+1 < 2 < 3 < 4 < 5 < 6 < 7 < 8 < 9 < 10 < 11 < 12 < 13 < 14 < 15 < 16 < 17 < 18 < 19 < 
+19 > 18 > 17 > 16 > 15 > 14 > 13 > 12 > 11 > 10 > 9 > 8 > 7 > 6 > 5 > 4 > 3 > 2 > 1 > 
+
+
+==2198== Memcheck, a memory error detector
+==2198== total heap usage: 1,284,936 allocs, 1,284,936 frees, 61,682,416 bytes allocated
+==2198== 
+==2198== All heap blocks were freed -- no leaks are possible

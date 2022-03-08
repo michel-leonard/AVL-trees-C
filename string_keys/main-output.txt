@@ -1,0 +1,33 @@
+-------------- Iterative AVL C Implementation - Binary Search Tree ---------------
+--- using STRING and integer keys, with and without key -> value association ---
+
+Insert 8281 random keys and verify the tree for each one.
+Delete the root until the tree is empty and verify each time.
+Verifier is OK, its recursive counter is 68574961.
+
+Insert 676 sorted keys and verify the tree for each one.
+Delete the keys and verify each time.
+Verifier is OK, its recursive counter is 456976.
+
+Insert 676 sorted keys and verify the tree for each one, also store a value.
+Delete the keys (reverse) and verify each time, also check the value.
+Verifier is OK, its recursive counter is 456976.
+
+Insert 456976 sorted keys. Took 0.0817358s.
+Delete the 456976 sorted keys from the rightmost. Took 0.081624s.
+
+Insert 676 keys, set a value, and read each value 17576 times. Took 1.08562s.
+
+Play 3s with alphabet but verify the tree at each step.
+**..*...*..*........*......*****.**...**....***.*.....*.....*
+Verifier is OK, its recursive counter is 218328418.
+
+Insert letters randomly and use the <each> function to print the keys.
+a < b < c < d < e < f < g < h < i < j < k < l < m < n < o < p < q < r < s < t < u < v < w < x < y < z < 
+z > y > x > w > v > u > t > s > r > q > p > o > n > m > l > k > j > i > h > g > f > e > d > c > b > a > 
+
+
+==2198== Memcheck, a memory error detector
+==2198== total heap usage: 707,137 allocs, 707,137 frees, 36,850,966 bytes allocated
+==2198== 
+==2198== All heap blocks were freed -- no leaks are possible
