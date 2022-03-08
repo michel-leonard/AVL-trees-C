@@ -1,6 +1,6 @@
 #include "bst.h"
 
-// https://github.com/key-value-pairs-C/Iterative-AVL
+// https://github.com/michel-leonard/AVL-trees-C/blob/main/string_keys/bst.c
 
 struct bst_entry *bst_at(struct bst_manager *const manager, const char *const key) {
 	// #1 Abdul Bari jDM6_TnYIqE
