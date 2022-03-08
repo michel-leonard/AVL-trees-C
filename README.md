@@ -260,9 +260,9 @@ bst_each(&m, &your_callback, 0, BST_HIGH_TO_LOW);
 
 # bst_node
 The bst_node is a simple C99 struct always used internally and never shown holding :
-* struct [bst_entry](#bst_entry) entry;
-* struct bst_node * rel [3] (the 3 relations, left child, right child and parent)
-* int height (always equal to `1 + Max(height left child, height right child)`
+* struct [bst_entry](#bst_entry) entry (the data)
+* struct bst_node * rel[3] (the 3 relations, left child, right child and parent)
+* int height (always equal to `1 + Max(height left child, height right child)`)
 
 
 # Get started
