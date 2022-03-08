@@ -224,18 +224,18 @@ The `manager->afffected field` is set to 1 if the insertion or the deletion happ
 You can use multiple bst_manager to handle multiple trees.
 
 # bst_entry
-This is a C struct representing your data, holding a key and a value, every [bst_node](#bst_node) contains a bst_entry. 
+This C struct holding a key and a value represent your data, every [bst_node](#bst_node) contains a bst_entry. 
 
 The demo is showing some examples with string key and integer key.\
-You can easily use a custom type of key, by executing minor changes in the source.
+You can easily use a custom type of key, by executing minor changes in the source (update the signature of functions and the comparator).
 
 ```c
-// A basic SET manager (keys only).
+// Configured like a basic SET manager (keys only).
 struct bst_entry {
 		char * key;
 	};
 	
-// A basic MAP manager (key-value pairs).
+// Configured like a basic MAP manager (key-value pairs).
 struct bst_entry {
 		char * key;
 		union {
@@ -248,7 +248,7 @@ You can safely remove the value field if not needed, it's provided by default fo
 
 # bst_direction
 The bst_direction is an enum that contains two values :
-* BST_LOW_TO_HOGH
+* BST_LOW_TO_HIGH
 * BST_HIGH_TO_LOW
 
 It can be used with [bst_each](#bst_each) to indicate which direction it should perform its traversal.
