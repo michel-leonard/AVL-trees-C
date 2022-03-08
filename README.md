@@ -268,7 +268,7 @@ The bst_node is a simple C99 struct always used internally and never shown holdi
 # Get started
 The provided tests are using both [string](../main/string_keys/main.c) and [integer](../main/integer_keys/main.c) keys, you can copy some code.\
 The provided tests are testing all functions, excepted bst_destroy (ask valgrind --leak-check=full for it).\
-If you want to associate a value with a key, the  struct holds a value field.\
+If you want to associate a value with a key, the  struct holds a value field.
 
 ```c
 struct bst_manager m = {0}; // zeroing a manager.
