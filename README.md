@@ -179,7 +179,7 @@ The space complexity of this operation is O(1).
 * a struct `bst_entry *` as first argument
 * the `void *args` parameter 3 as second argument
 
-The execution will be done from `BST_LOW_TO_HIGH` or from `BST_HIGH_TO_LOW`, accordingly its last parameter.
+The execution will be done from `BST_LOW_TO_HIGH` or from `BST_HIGH_TO_LOW`, accordingly to the last parameter.
 
 ```c
 // assuming your_function have to print all keys from low to high.
