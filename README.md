@@ -9,7 +9,7 @@ This ~300 lines C software :
 * organize quick lookup, insertion, or deletion of a key in such a way that your tree always remains balanced
 
 Every binary search tree guarantee `O(height)` worst-case complexity for lookup, insertion, and deletion.\
-With this implementation and thanks to the rotations, the heights of your BSTs are always lesser than `1.44 * log2(number of keys)`.
+Thanks to the rotations, the heights of your BSTs are always lesser than `1.44 * log2(number of keys)`.
 
 # Status
 
