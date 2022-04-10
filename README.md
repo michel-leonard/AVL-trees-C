@@ -332,4 +332,4 @@ AVL tree is a self-balancing binary search tree, AVL stands for Adelson-Velskii 
 * Georgy Maximovich [Adelson-Velsky](https://www.math.toronto.edu/askold/2014-UMN-4-e-Adelson-.pdf "Adelson-Velsk") (1922-2014) was a Soviet and Israeli mathematician and computer scientist
 * Yevgeny Mikhaylovich Landis (1921-1997) was a Soviet mathematician
 
-Shortest link to this page : [j.mp/C-AVL](http://j.mp/C-AVL)
+Shortest link to this page : [bit.ly/C-AVL](http://bit.ly/C-AVL)
