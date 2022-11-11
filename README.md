@@ -17,9 +17,9 @@ Ready for deployment to a production environment.
 
 ### Real use of AVL
 
-There is one github project that this [AVL](https://github.com/michel-leonard/C-Quadratic-Sieve#AVL-trees) logic, it's a Pure C factorizer using self-initialising **Quadratic Sieve**.
+There is one github project that use this [AVL](https://github.com/michel-leonard/C-Quadratic-Sieve#AVL-trees) base, it's a Pure C factorizer using self-initialising **Quadratic Sieve**.
 
-In 2022, AVL has never been involved in any issues on this project, which has been tested for weeks and days non-stop.
+In 2022, this AVL structure has never been involved in any issues on this project, which has been tested for weeks and days non-stop.
 
 # Functions
 The 4 provided functions are :
