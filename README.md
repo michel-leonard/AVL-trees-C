@@ -15,6 +15,12 @@ Thanks to the rotations, the heights of your BSTs are always lesser than `1.44 *
 
 Ready for deployment to a production environment.
 
+### Real use of AVL
+
+There is one github project that uses [AVL](https://github.com/michel-leonard/C-Quadratic-Sieve#AVL-trees), it's a Pure C factorizer using self-initialising **Quadratic Sieve**.
+
+In 2022, AVL has never been involved in any issues on this project, which has been tested for weeks and days non-stop.
+
 # Functions
 The 4 provided functions are :
 * [bst_at](#bst_at)
