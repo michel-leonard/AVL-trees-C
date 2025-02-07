@@ -17,9 +17,7 @@ Ready for deployment to a production environment.
 
 ### Real use of AVL
 
-There is one github project that use this [AVL](https://github.com/michel-leonard/C-Quadratic-Sieve#AVL-trees) base, it's a Pure C factorizer using self-initialising **Quadratic Sieve**.
-
-In 2024, this AVL structure is used.
+There is one GitHub project that use this AVL implementation, it's a [Factorization software using Quadratic Sieve](https://github.com/michel-leonard/C-Quadratic-Sieve).
 
 # Functions
 The 4 provided functions are :
