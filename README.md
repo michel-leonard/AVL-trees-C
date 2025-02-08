@@ -1,7 +1,12 @@
-
 # Fast Iterative C AVL Binary Search Tree
-Basic C99 **100% iterative** implementation of AVL trees (self-balanced binary search trees).\
-Time complexity for all operation (access, insertion, deletion) is `O(log(n))`.
+
+The `avl` functions (released "as is", into the public domain, without any warranty, express or implied) guarantees worst-case `O(log n)` time complexity for all operations (search, insert, delete).
+
+## Status
+
+Ready for deployment to a production environment.
+
+##  A **100% iterative** BST implementation in C99
 
 This ~300 lines C software :
 * uses a **height field** and a **parent pointer** for each tree node
@@ -11,28 +16,24 @@ This ~300 lines C software :
 Every binary search tree guarantee `O(height)` worst-case complexity for lookup, insertion, and deletion.\
 Thanks to the rotations, the heights of your BSTs are always lesser than `1.44 * log2(number of keys)`.
 
-# Status
-
-Ready for deployment to a production environment.
-
-### Real use of AVL
+## Real use of AVL
 
 There is a GitHub project that use this AVL Trees implementation, it's a Factorization software using [Quadratic Sieve](https://github.com/michel-leonard/C-Quadratic-Sieve) that is in **production** state.
 
-# Functions
+## Functions
 The 4 provided functions are :
 * [bst_at](#bst_at)
 * [bst_rm](#bst_rm)
 * [bst_each](#bst_each)
 * [bst_destroy](#bst_destroy)
 
-# Structures
+## Structures
 The 3 provided structures :
 * [bst_manager](#bst_manager)
 * [bst_entry](#bst_entry)
 * [bst_node](#bst_node) (internal use only)
 
-# Synopsis
+## Synopsis
 
 ```c
 #include <stdio.h>
@@ -207,7 +208,7 @@ Clear the manager's binary search tree, free all the memory using a stack.
 bst_destroy(&m); // terminate the work.
 ```
 
-# bst_manager
+## bst_manager
 The [bst_manager](../main/integer_keys/bst.h) is a simple C99 struct, which must be zeroed to start the job properly, it holds :
 * The (bst_node \*) root of the tree (software set, user read)
 * A (size_t) counter of entries (software set, user read)
@@ -227,7 +228,7 @@ The counter of entries is updated upon insertion or deletion.
 The `manager->afffected field` is set to 1 if the insertion or the deletion happened just now, 0 otherwise.\
 You can use multiple bst_manager to handle multiple trees.
 
-# bst_entry
+## bst_entry
 This C struct holding a key and a value represent your data, every [bst_node](#bst_node) contains a bst_entry. 
 
 The demo is showing some examples with string key and integer key.\
@@ -250,7 +251,7 @@ struct bst_entry {
 ```
 You can safely remove the value field if not needed, it's provided by default for convenience.
 
-# bst_direction
+## bst_direction
 The bst_direction is an enum that contains two values :
 * BST_LOW_TO_HIGH
 * BST_HIGH_TO_LOW
@@ -262,14 +263,14 @@ It can be used with [bst_each](#bst_each) to indicate which direction it should 
 bst_each(&m, &your_callback, 0, BST_HIGH_TO_LOW);
 ```
 
-# bst_node
+## bst_node
 The bst_node is a simple C99 struct always used internally and never shown holding :
 * struct [bst_entry](#bst_entry) entry (the data)
 * struct bst_node * rel[3] (the 3 relations, left child, right child and parent)
 * int height (always equal to `1 + Max(height left child, height right child)`)
 
 
-# Get started
+## Get started
 The provided tests are using both [string](../main/string_keys/main.c) and [integer](../main/integer_keys/main.c) keys, you can copy some code.\
 The provided tests are testing all functions, excepted bst_destroy (ask valgrind --leak-check=full for it).\
 If you want to associate a value with a key, the  struct holds a value field.
@@ -282,7 +283,7 @@ bst_rm(&m, "key"); // remove the entry holding that key.
 bst_destroy(&m); // clear the manager.
 ```
 
-# The compilation
+## The compilation
 The following parameters i used.
 ```
 cmake_minimum_required(VERSION 3.17)
@@ -295,7 +296,7 @@ set (CMAKE_C_FLAGS "-Wall -Wextra -pedantic -g -O2 -std=c99")
 add_executable(bst strings_keys/main.c)
 ```
 
-# Other / Technical
+## Other / Technical
 If you use this software into a multithreaded program, you should remove the 6 **static** keywords in the source code.\
 Every node in the tree know its parent, only the root node has 0 for parent, the [bst_manager](#bst_manager) hold this particular node.
 
@@ -315,7 +316,7 @@ When [bst_at](#bst_at) and [bst_rm](#bst_rm) functions are performing standard r
 During the rotation the **op** variable holds the rotation name (RR, RL, LL or LR).\
 This software will break the retracing loop as soon as possible, i think it will not unnecessarily verify that 1 = 1.
 
-# My tests
+## My tests
 ```
 I always use C++ and 10k managers per test, then insert between 0 and 5k entries.
 You can see a lite version of my verifier in the tests, the original :
@@ -331,9 +332,7 @@ Insertion of [ 1M, 10M, 100M ] sorted keys in [ 0.4s, 4s, 40s ].
 Rotations counter was [ 919k, 9M, 91M ]. <!-- YzSJBowPECY -->
 ```
 
-# AVL
+## AVL
 AVL tree is a self-balancing binary search tree, AVL stands for Adelson-Velskii and Landis :
 * Georgy Maximovich [Adelson-Velsky](https://www.math.toronto.edu/askold/2014-UMN-4-e-Adelson-.pdf "Adelson-Velsk") (1922-2014) was a Soviet and Israeli mathematician and computer scientist
 * Yevgeny Mikhaylovich Landis (1921-1997) was a Soviet mathematician
-
-Shortest link to this page : [bit.ly/C-AVL](http://bit.ly/C-AVL)
